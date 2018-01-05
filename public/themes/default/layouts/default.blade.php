@@ -11,13 +11,13 @@
     {!! Theme::asset()->scripts() !!}
     <style>
         .content-container{height: 100%;
-            display: none;}
+        }
     </style>
 </head>
     <body data-spy="scroll" data-target=".navbar">
-        <div class="loader-container">
-            <div class="loader"></div>
-        </div>
+        {{--<div class="loader-container">--}}
+            {{--<div class="loader"></div>--}}
+        {{--</div>--}}
         <div class="content-container">
             {!! Theme::content() !!}
         </div>

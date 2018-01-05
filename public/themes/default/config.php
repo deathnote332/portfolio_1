@@ -83,10 +83,12 @@ return array(
 
             //owl carousel
             $theme->asset()->usePath()->add('owl.carousel.min.css', 'css/owl.carousel.min.css');
+
             $theme->asset()->usePath()->add('owl.carousel.min.js', 'js/owl.carousel.min.js');
             $theme->asset()->usePath()->add('jquery.easing.1.3.min.js', 'js/jquery.easing.1.3.min.js');
 
-
+//            $theme->asset()->usePath()->add('style.css', 'css/style.css');
+//            $theme->asset()->usePath()->add('scripts.js', 'js/scripts.js');
 
         },
 

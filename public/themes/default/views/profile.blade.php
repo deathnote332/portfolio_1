@@ -1,663 +1,875 @@
-{!! Theme::asset()->usePath()->add('profile.css','/css/profile.css') !!}
 
-<div class="background-image" id="page-top">
-    <div class="container">
-        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="550">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"></a>
-                </div>
-                <div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a class="page-scroll" href="#about">ABOUT</a></li>
-                            <li><a class="page-scroll" href="#portfolio">PORTFOLIO</a></li>
-                            <li><a  class="page-scroll"href="#skills">SKILLS</a></li>
-                            <li><a  class="page-scroll"href="#experience">WORK EXPERIENCE</a></li>
-                            <li><a  class="page-scroll"href="#contact">CONTACT</a></li>
+<style>
+    /* Qualification and Experience */
 
-                        </ul>
+    .experience {
+        margin-left: 70px;
+        padding: 10px 0px;
+    }
+
+    .experience-item {
+        position: relative;
+        margin: 40px 0px;
+    }
+
+    .experience-circle {
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        line-height: 35px;
+        font-size: 14px;
+        border-radius: 100%;
+        position: absolute;
+        left: -60px;
+        color: #fff;
+        background: #4c9cef;
+        padding-top: 25px;
+        box-shadow: -4px 4px 4px 0px rgba(90, 91, 95, 0.3);
+    }
+
+    .experience-circle i {
+        display: block;
+        font-size: 40px;
+    }
+
+    .experience-company i {
+        font-size: 40px !important;
+        margin-top: 15px !important;
+    }
+
+    .experience-circle p {
+        font-size: 11px;
+        margin-top: 5px;
+    }
+
+    .experience-content {
+        margin-left: 80px;
+        position: relative;
+        background: #fff;
+        border: 1px solid #3498db;
+        border-radius: 6px;
+        padding: 20px 25px;
+    }
+
+    .experience-content h4 {
+        line-height: 30px;
+    }
+
+    .experience-content:after,
+    .experience-content:before {
+        right: 100%;
+        top: 35%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .experience-content:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: #ffffff;
+        border-width: 14px;
+        margin-top: -20px;
+    }
+
+    .experience-content:before {
+        border-color: rgba(238, 238, 238, 0);
+        border-right-color: #f7639a;
+        border-width: 16px;
+        margin-top: -21px;
+    }
+
+    .experience-content p {
+        color: #696969;
+    }
+
+    .experience-color-blue {
+        border: 1px solid #4c9cef !important;
+    }
+
+    .experience-color-blue:before {
+        border-right-color: #4c9cef !important;
+    }
+</style>
+
+{{--<!-- Preloader Start -->--}}
+{{--<div class="preloader">--}}
+    {{--<p>Loading...</p>--}}
+{{--</div>--}}
+{{--<!-- Preloader End -->--}}
+
+
+
+<!-- Menu Section Start -->
+<header id="home">
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <div class="logo">
+                        <a href="index-2.html">WebRes</a>
                     </div>
                 </div>
-            </div>
-        </nav>
 
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="info zoomIn">
-                    <h1>Hi, I'm John Paul Inhog</h1>
-                    <h2 class="cd-headline clip is-full-width">
-                        <span class="cd-words-wrapper">
-                            <b class="is-visible">Web Developer</b>
-                            <b>Get cape. Wear cape. Fly.</b>
-
-                        </span>
-                    </h2>
-                    <a class="page-scroll" href="#about">READ MORE</a>
-
+                <div class="col-sm-9">
+                    <div class="navigation-menu">
+                        <div class="navbar">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a class="smoth-scroll" href="#home">Home <div class="ripple-wrapper"></div></a>
+                                    </li>
+                                    <li><a class="smoth-scroll" href="#about">About</a>
+                                    </li>
+                                    <li><a class="smoth-scroll" href="#portfolio">Portfolio</a>
+                                    </li>
+                                    <li><a class="smoth-scroll" href="#testimonials">Testimonial</a>
+                                    </li>
+                                    <li><a class="smoth-scroll" href="#services">services</a>
+                                    </li>
+                                    <li><a class="smoth-scroll" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<section id="about">
+</header>
+<!-- Menu Section End -->
+
+
+<!-- Home Section Start -->
+<section class="home-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-md-push-5 text-center col-xs-6 col-xs-push-3">
-                <h1 class="section-title">ABOUT</h1>
 
-            </div>
-        </div>
+            <div class="col-sm-offset-2 col-md-4 col-sm-6 margin-left-setting">
+                <div class="margin-top-150">
 
-        <div class="row">
-            <div class="col-md-4 wow fadeIn">
-                <img src="../assets/images/jp.JPG" class="img-responsive center-block">
-            </div>
-            <div class="col-md-4 text-center wow fadeIn ">
-                <div class="about-header">
-                   <h2> Introduction.</h2>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td>Name</td>
+                                <td>John Doe</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>doe@domain.com</td>
+                            </tr>
+                            <tr>
+                                <td>Designation</td>
+                                <td>Web Designer</td>
+                            </tr>
+                            <tr>
+                                <td>Experience</td>
+                                <td>8 Years</td>
+                            </tr>
+                            <tr>
+                                <td>Contact</td>
+                                <td>1234567890</td>
+                            </tr>
+                            <tr>
+                                <td>Resume</td>
+                                <td style="background-color: #f7639a;"><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Check Out My Resume">Resume.pdf</a></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-                <p>Hi, there! I am <u>John Paul</u>. Currently working as a junior software developer. I love to create useful ideas and turn them into brilliant codes like I always do.
-                 I'm a passionate web developer and always eager to learn new things about our current technology.
-                </p>
-                <ul>
-                    <li>
-                        <p>Date Of Birth : Aprl 22, 1995</p>
-                    </li>
-                    <li>
-                        <p>Country : Philippines</p>
-                    </li>
-                </ul>
-               <div class="button-cv">
-                   <a class="button-preview" href="../assets/jpicv.docx" download>DOWNLOAD CV</a>
-                </div>
-
-
             </div>
-            <div class="col-md-4 text-center wow fadeInUp " data-wow-delay=".5s">
-                <div class="about-header">
-                    <h2> Hobbies & Interests.</h2>
-                </div>
-                <div class="hobbies-interest">
-                    <ul>
-                        <li>
-                            <i class="fa fa-code"></i>
-                            <h5>Code</h5>
-                        </li>
-                        <li>
-                            <i class="fa fa-gamepad"></i>
-                            <h5>Games</h5>
-                        </li>
-                        <li>
-                            <i class="fa fa-music"></i>
-                            <h5>Music</h5>
-                        </li>
-                        <li>
-                            <i class="fa fa-coffee"></i>
-                            <h5>Coffee</h5>
-                        </li>
-                        <li>
-                            <i class="fa fa-plane"></i>
-                            <h5>Travel</h5>
-                        </li>
-                        <li>
-                            <i class="fa fa-bicycle"></i>
-                            <h5>Bicycle</h5>
-                        </li>
-                    </ul>
+
+            <div class="col-md-5 col-sm-6">
+                <div class="me-image margin-top-150">
+                    <img src="assets/images/profile_img.png" alt="">
                 </div>
             </div>
         </div>
-
     </div>
 </section>
+<!-- Home Section End -->
 
-<section id="portfolio">
-<div class="container">
-    <div class="row">
-        <div class="col-md-2 col-md-push-5 text-center col-xs-6 col-xs-push-3">
-            <h1 class="section-title">PORTFOLIO</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="owl-carousel">
-           <div class="item">
-                <div class="col-md-12 text-center">
-                    <div class="col-md-6">
-                        <div class="portfolio-img">
-                            <img class="img-responsive" src="../assets/images/papers.jpg">
-                        </div>
 
-                    </div>
-                    <div class="col-md-6">
-                        <div class="portfolio-details">
-                            <div class="title">
-                                Project Title
-                            </div>
-                            <h3>PAPERSLLC</h3>
-                            <div class="title">
-                                Project Description
-                            </div>
-                            <p>Papersllc is an online boarding for asylum and illegal immigrant in US particularly in California.
-                                The main focus of the development is to create an automated workflow process manager that will help the client to reduce the administrative work done by a manual and/or disparate intake process for CARACEN and its affiliated agencies. To lower the time spent in scheduling appointments, answering case status from clients and assisting clients in gathering supporting documents before the initial consultation appointment is conducted.
-                            </p>
 
-                            <div class="title">
-                                Project role
-                            </div>
-                            <p>Junior Software Developer</p>
-                            <div class="title">
-                                Project tools
-                            </div>
-                            <p>HTML, Css, PHP, Ajax, Jquery, Mysql</p>
-                            <div class="button-preview">
-                                <a href="#">PREVIEW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="item">
-                <div class="col-md-12 text-center">
-                    <div class="col-md-6">
-                        <div class="portfolio-img">
-                            <img class="img-responsive" src="../assets/images/catering.png">
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="portfolio-details">
-                            <div class="title">
-                                Project Title
-                            </div>
-                            <h3>Reservation System</h3>
-                            <div class="title">
-                                Project Description
-                            </div>
-                            <p>Online Reservation system for twenty years.
-                            </p>
-
-                            <div class="title">
-                                Project role
-                            </div>
-                            <p>System Developer</p>
-                            <div class="title">
-                                Project tools
-                            </div>
-                            <p>VB.net, PHP, Mysql, Crystal Report</p>
-                            <div class="button-preview">
-                                <a href="#">PREVIEW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="col-md-12 text-center">
-                    <div class="col-md-6">
-                        <div class="portfolio-img">
-                            <img class="img-responsive" src="">
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="portfolio-details">
-                            <div class="title">
-                                Project Title
-                            </div>
-                            <h3>Inventory System</h3>
-                            <div class="title">
-                                Project Description
-                            </div>
-                            <p>Online inventory system for MCOAT Paint Commercial & Mdse
-                            </p>
-
-                            <div class="title">
-                                Project role
-                            </div>
-                            <p>System Developer</p>
-                            <div class="title">
-                                Project tools
-                            </div>
-                            <p>VB.net, PHP, Android, Mysql, Crystal Report</p>
-                            <div class="button-preview">
-                                <a href="#">PREVIEW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="col-md-12 text-center">
-                    <div class="col-md-6">
-                        <div class="portfolio-img">
-                            <img class="img-responsive" src="../assets/images/queuing.png">
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="portfolio-details">
-                            <div class="title">
-                                Project Title
-                            </div>
-                            <h3>Queuing System for PLP</h3>
-                            <div class="title">
-                                Project Description
-                            </div>
-                            <p>Online queuing system for Pamantasan ng Lungsod ng Pasig
-                            </p>
-
-                            <div class="title">
-                                Project role
-                            </div>
-                            <p>System Developer</p>
-                            <div class="title">
-                                Project tools
-                            </div>
-                            <p>VB.net, PHP, Android, Mysql, Crystal Report</p>
-                            <div class="button-preview">
-                                <a href="#">PREVIEW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="col-md-12 text-center">
-                    <div class="col-md-6">
-                        <div class="portfolio-img">
-                            <img class="img-responsive" src="">
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="portfolio-details">
-                            <div class="title">
-                                Project Title
-                            </div>
-                            <h3>Scoreboard System</h3>
-                            <div class="title">
-                                Project Description
-                            </div>
-                            <p>Scoreboard system for Pamantasan ng Lungsod ng Pasig.
-                            </p>
-
-                            <div class="title">
-                                Project role
-                            </div>
-                            <p>System Developer</p>
-                            <div class="title">
-                                Project tools
-                            </div>
-                            <p>VB.net, PHP, Mysql, Crystal Report</p>
-                            <div class="button-preview">
-                                <a href="#">PREVIEW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-<section id="skills">
+<!-- Experience Start -->
+<section class="section-space-padding">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-md-push-5 text-center col-xs-6 col-xs-push-3">
-                <h1 class="section-title">SKILLS</h1>
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>My Experience.</h2>
+                    <div class="divider dark">
+                        <i class="icon-graduation"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
             </div>
         </div>
-        <div class="row wow bounceInDown">
 
-            <div class="col-md-3 col-xs-6">
-                <div class="skill-img">
-                    <img  src="../assets/images/svg/html.svg">
+        <div class="row">
+
+            <div class="col-md-6 col-sm-6">
+                <div class="experience">
+
+                    <div class="experience-item">
+                        <div class="experience-circle">
+                            <i class="icon-graduation"></i>
+                            <p>8, Nov 2016</p>
+                        </div>
+                        <div class="experience-content experience-color-blue">
+                            <h4>Master Degree in Java</h4>
+                            <h6>College Name here</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend risus sed feugiat faucibus.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-circle">
+                            <i class="icon-trophy"></i>
+                            <p>8, Nov 2016</p>
+                        </div>
+                        <div class="experience-content experience-color-blue">
+                            <h4>Diploma in Web Designing</h4>
+                            <h6>Institute Name here</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend risus sed feugiat faucibus.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-circle">
+                            <i class="icon-book-open"></i>
+                            <p>8, Nov 2016</p>
+                        </div>
+                        <div class="experience-content experience-color-blue">
+                            <h4>High School Education</h4>
+                            <h6>School Name here</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend risus sed feugiat faucibus.</p>
+                        </div>
+                    </div>
 
                 </div>
             </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="skill-img">
-                    <img  src="../assets/images/svg/css.svg">
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="skill-img">
-                    <img  src="../assets/images/svg/bootstrap.svg">
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="skill-img">
-                    <img src="../assets/images/js.png">
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="skill-img">
-                    <img  src="../assets/images/svg/jquery.svg">
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="skill-img">
-                    <img  src="../assets/images/svg/php.svg">
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="skill-img">
-                    <img  src="../assets/images/svg/laravel.svg">
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="skill-img">
-                    <img  src="../assets/images/svg/mysql.svg">
+
+            <div class="col-md-6 col-sm-6">
+                <div class="experience">
+
+                    <div class="experience-item">
+                        <div class="experience-circle experience-company pink-color-bg">
+                            <i class="icon-energy"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h4>DevBlog System PVT. LTD.</h4>
+                            <h6>Currently Working, SEO Executive</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend risus sed feugiat faucibus.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-circle experience-company pink-color-bg">
+                            <i class="icon-ghost"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h4>Rolling System PVT. LTD.</h4>
+                            <h6>2008-2015, Senior Developer</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend risus sed feugiat faucibus.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-circle experience-company pink-color-bg">
+                            <i class="icon-compass"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h4>WebRec System PVT. LTD.</h4>
+                            <h6>2005-2007, Senior Designer</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend risus sed feugiat faucibus.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
         </div>
     </div>
-
 </section>
-<section id="qoute">
-    <div class="container">
-        <div class="img-overlay">
+<!-- Experience End -->
 
 
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="qoute">
-                    <q>5 Trust in the Lord with all your heart and lean not on your own understanding;&nbsp;&nbsp;&nbsp; &nbsp;in all your ways submit to him,and he will make your paths straight </q>-Proverbs 3:5-6
-
-                </div>
-           </div>
-        </div>
-
-    </div>
-</section>
-<section id="experience">
+<!-- About Start -->
+<section id="about" class="about section-space-padding">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-md-push-5 text-center col-xs-6 col-xs-push-3">
-                <h1 class="section-title">WORK</h1>
-            </div>
-        </div>
-        <div class="col-md-12 ">
-            <div class="col-md-5 col-md-offset-1 col-md-pull-1">
-                <div class="specialty wow fadeInUp" data-wow-delay="1s">
-                    <q>Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</q>- Bill Gates
-
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>About Me.</h2>
+                    <div class="divider dark">
+                        <i class="icon-emotsmile"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                 </div>
             </div>
+        </div>
+
+
+        <div class="row">
+
             <div class="col-md-6">
-                <div class="year-1">
+                <div class="about-me-text margin-top-50">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat facilisis dignissim. Etiam scelerisque ultricies euismod. Etiam pellentesque enim ac risus dapibus consequat. Nulla euismod lacinia felis, vel <a href="#" data-toggle="modal" data-target="#skillmodal" title="My Skills"><b>Check out my Skills</b></a> massa accumsan sit amet. Cras id fermentum neque. Curabitur et mollis neque. Fusce eu mattis arcu. Integer eget augue sit amet lorem convallis fermentum, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat facilisis dignissim. Etiam scelerisque ultricies euismod. Etiam pellentesque enim ac risus dapibus consequat.</p>
+                </div>
+            </div>
 
-                    <div class="time wow fadeInDown">
-                        2015
+            <div class="col-md-6">
+                <div class="about-me-text pattern-bg margin-top-50 margin-bottom-50">
+                    <div class="text-center">
+                        <a class="button button-style button-style-dark button-style-color-2" data-toggle="modal" data-target="#subscribemodal" href="#">Subscribe</a>
                     </div>
+                </div>
+
+                <div class="about-me-text">
+
+                    <ul class="social-icon">
+                        <li><a href="#" target="_blank" class="facebook"><i class="icon-social-facebook"></i></a></li>
+                        <li><a href="#" target="_blank" class="twitter"><i class="icon-social-twitter"></i></a></li>
+                        <li><a href="#" target="_blank" class="behance"><i class="icon-social-behance"></i></a></li>
+                        <li><a href="#" target="_blank" class="dribbble"><i class="icon-social-dribbble"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Skills Modal Start -->
+<div class="modal fade padding-top-70" id="skillmodal" role="dialog">
+    <div class="modal-dialog">
 
 
-                    <div class="work-container wow fadeInUp" data-wow-delay=".3s">
-                        <span class="fa fa-circle-o"></span>
-                        <div class="work-image">
-                            <img class="img-responsive" src="../assets/images/republisys.png">
-                        </div>
-                        <div class="work-info">
-
-                            <div class="work-content">
-                               <div class="work-company">
-                                    REPUBLISYS INC.
-                               </div>
-                                <div class="work-date">
-                                    June 2016 - Current
-                                </div>
-                                <div class="work-position">
-                                    Junior Software Developer
-                                </div>
-                                <div class="work-responsibility">
-                                    I work as back-end developer and front-end developer for almost 1year and 1month.
-                                </div>
+        <div class="modal-content pattern-bg">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title margin-top-30">
+                            <button type="button" class="btn pull-right" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                            <h2>My Skills.</h2>
+                            <div class="divider dark">
+                                <i class="icon-energy"></i>
                             </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                         </div>
                     </div>
                 </div>
-                <div class="year-2">
-                    <div class="time wow fadeInDown">
-                        2015
-                    </div>
 
-                    <div class="work-container wow fadeInUp" data-wow-delay=".3s">
-                        <span class="fa fa-circle-o"></span>
-                        <div class="work-image">
-                            <img class="img-responsive" src="../assets/images/mcoat.jpg">
-                        </div>
-                        <div class="work-info">
+                <div class="row">
+                    <div class="col-sm-offset-2 col-xs-offset-0 col-md-8 col-sm-8">
 
-                            <div class="work-content">
-                                <div class="work-company">
-                                    MCOAT PAINT COMMERCIAL AND MDSE
+                        <div class="my-skill margin-bottom-50">
+                            <strong>Graphic Design</strong>
+                            <span class="pull-right">80%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
                                 </div>
-                                <div class="work-date">
-                                    April 2014 - February 2016
+                            </div>
+
+                            <strong>Website Design</strong>
+                            <span class="pull-right">99%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 99%;">
                                 </div>
-                                <div class="work-position">
-                                    System Developer
+                            </div>
+
+                            <strong>HTML5/CSS3</strong>
+                            <span class="pull-right">85%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
                                 </div>
-                                <div class="work-responsibility">
-                                    I work for almost 2years as a part time developer and 3 months for OJT.
+                            </div>
+
+                            <strong>Javascript</strong>
+                            <span class="pull-right">90%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<!--    <div class="container">-->
-<!--        <div class="page-header">-->
-<!--            <h1 id="timeline">Timeline</h1>-->
-<!--        </div>-->
-<!--        <ul class="timeline">-->
-<!--            <li>-->
-<!--                <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>-->
-<!--                <div class="timeline-panel">-->
-<!--                    <div class="timeline-heading">-->
-<!--                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>-->
-<!--                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-body">-->
-<!--                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="timeline-inverted">-->
-<!--                <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>-->
-<!--                <div class="timeline-panel">-->
-<!--                    <div class="timeline-heading">-->
-<!--                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-body">-->
-<!--                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>-->
-<!--                        <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>-->
-<!--                <div class="timeline-panel">-->
-<!--                    <div class="timeline-heading">-->
-<!--                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-body">-->
-<!--                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="timeline-inverted">-->
-<!--                <div class="timeline-panel">-->
-<!--                    <div class="timeline-heading">-->
-<!--                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-body">-->
-<!--                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>-->
-<!--                <div class="timeline-panel">-->
-<!--                    <div class="timeline-heading">-->
-<!--                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-body">-->
-<!--                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>-->
-<!--                        <hr>-->
-<!--                        <div class="btn-group">-->
-<!--                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">-->
-<!--                                <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>-->
-<!--                            </button>-->
-<!--                            <ul class="dropdown-menu" role="menu">-->
-<!--                                <li><a href="#">Action</a></li>-->
-<!--                                <li><a href="#">Another action</a></li>-->
-<!--                                <li><a href="#">Something else here</a></li>-->
-<!--                                <li class="divider"></li>-->
-<!--                                <li><a href="#">Separated link</a></li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <div class="timeline-panel">-->
-<!--                    <div class="timeline-heading">-->
-<!--                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-body">-->
-<!--                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li class="timeline-inverted">-->
-<!--                <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>-->
-<!--                <div class="timeline-panel">-->
-<!--                    <div class="timeline-heading">-->
-<!--                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-body">-->
-<!--                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </div>-->
-</section>
-<section id="contact">
-    <div class="container">
-        <div class="col-md-8 col-md-offset-2 col-md-push-1">
-            <div class="col-md-6 col-xs-6 wow fadeInDown" data-wow-delay="1s">
-                <i class="fa fa-envelope fa-lg"></i>
-                <h5>EMAIL</h5>
-                <p>aexilsxd@gmail.com</p>
-            </div>
-            <div class="col-md-6 col-xs-6  wow fadeInDown" data-wow-delay="2s">
-                <i class="fa fa-phone fa-lg"></i>
-                <h5>PHONE</h5>
-                <p>09071348778</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-md-push-1">
-                <form>
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
-                            <textarea class="form-control" name="message" rows="4" placeholder="Message" required="required"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="contact-submit wow fadeInUp">SUBMIT</button>
-                </form>
-
-            </div>
-        </div>
-    </div>
-</section>
-<section id="footer">
-    <div class="col-md-12 text-center">
-        <a href="https://github.com/deathnote332"><i class="fa fa-github fa-2x"></i></a>
-        <a href="https://stackoverflow.com/users/6850994/paul"><i class="fa fa-stack-overflow fa-2x"></i></a>
-        <a href="https://www.facebook.com/jampolXD"><i class="fa fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
-        <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
-    </div>
-</section>
-<div class="scroll-top" style="display: block;">
-    <a class="page-scroll" href="#page-top"><span class="fa fa-angle-up"></span></a>
 </div>
-<script>
-
-    $(window).load(function() {
-        $('.loader-container').fadeOut()
-        $('.content-container').show()
-
-    })
+<!-- Skills Modal End -->
 
 
-    $(document).ready(function(){
-        // Scroll to top
 
-        $('.scroll-top').hide()
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 400) {
-                $('.scroll-top').fadeIn();
-            } else {
-                $('.scroll-top').fadeOut();
-            }
+<!-- Subscribe Modal Start -->
+<div class="modal fade subscribe padding-top-120" id="subscribemodal" role="dialog">
+    <div class="modal-dialog">
 
-        });
 
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title margin-top-30">
+                            <button type="button" class="btn pull-right" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                            <h2>Subscribe.</h2>
+                            <div class="divider dark">
+                                <i class="icon-envelope-letter"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                </div>
 
-            navText: ["<img src='../assets/images/btn-left.png'>","<img src='../assets/images/btn-right.png'>"],
+                <div class="row">
+                    <div class="col-sm-offset-2 col-xs-offset-0 col-md-8 col-sm-8">
 
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:1
-                },
-                1000:{
-                    items:1
-                }
-            }
-        })
+                        <div class="margin-bottom-50">
+                            <form id="mc-form" method="post" action="http://uipasta.us14.list-manage.com/subscribe/post?u=854825d502cdc101233c08a21&amp;id=86e84d44b7">
 
-        jQuery('a.page-scroll').bind('click', function(event) {
-            var $anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top
-            }, 1500, 'easeInOutExpo');
-            event.preventDefault();
-        });
+                                <div class="subscribe-form">
+                                    <input id="mc-email" type="email" placeholder="Email Address" class="text-input">
+                                    <button class="submit-btn" type="submit">Submit</button>
+                                </div>
+                                <label for="mc-email" class="mc-label"></label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Subscribe Modal End -->
+<!-- About End -->
 
-        // Closes Responsive Menu on Menu Item Click
 
-        jQuery('.navbar-collapse ul li a').click(function() {
-            $('.navbar-toggle:visible').click();
-        });
 
-        // Animation reveal on scroll
+<!-- Portfolio Start -->
+<section id="portfolio" class="portfolio section-space-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>My Portfolio.</h2>
+                    <div class="divider dark">
+                        <i class="icon-picture"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
 
-        new WOW().init()
-    })
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="portfolio">
+                    <li class="filter" data-filter="all">all</li>
+                    <li class="filter" data-filter=".apps">apps</li>
+                    <li class="filter" data-filter=".mockups">mockups</li>
+                    <li class="filter" data-filter=".wordpress">wordpress</li>
+                </ul>
+            </div>
 
-</script>
+            <div class="col-md-10">
+                <div class="portfolio-inner margin-top-30">
+
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix apps">
+                        <div class="item">
+                            <a href="images/portfolio/1.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix mockups">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix apps">
+                        <div class="item">
+                            <a href="images/portfolio/3.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/3.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix mockups wordpress">
+                        <div class="item">
+                            <a href="images/portfolio/4.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/4.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix wordpress apps">
+                        <div class="item">
+                            <a href="images/portfolio/5.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/5.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix apps mockups wordpress" title="Project Title">
+                        <div class="item">
+                            <a href="images/portfolio/6.jpg" class="portfolio-popup">
+                                <img src="images/portfolio/6.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center margin-top-50">
+        <a class="button button-style button-style-dark button-style-color-2 smoth-scroll" href="#contact">Hire Me!</a>
+    </div>
+
+</section>
+<!-- Portfolio End -->
+
+
+
+<!-- Testimonial Start -->
+<section id="testimonials" class="testimonial-section section-space-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>Testimonials.</h2>
+                    <div class="divider dark">
+                        <i class="icon-speech"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-sm-offset-2 col-md-6 col-sm-8">
+                <div class="testimonial-carousel-list margin-top-20">
+
+                    <div class="testimonial-word text-center">
+                        <img src="images/testimonial/1.png" class="img-responsive" alt="">
+                        <h2>John doe</h2>
+                        <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisauteiruredolor in reprehenderit in voluptate.</p>
+                    </div>
+
+                    <div class="testimonial-word text-center">
+                        <img src="images/testimonial/2.png" class="img-responsive" alt="">
+                        <h2>John doe</h2>
+                        <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisauteiruredolor in reprehenderit in voluptate.</p>
+                    </div>
+
+                    <div class="testimonial-word text-center">
+                        <img src="images/testimonial/3.png" class="img-responsive" alt="">
+                        <h2>John doe</h2>
+                        <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duisauteiruredolor in reprehenderit in voluptate.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Testimonial End -->
+
+
+
+<!-- statistics -->
+<section class="statistics-section section-space-padding bg-cover text-center">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="statistics bg-color-1">
+                    <div class="statistics-icon"><i class="icon-mustache"></i>
+                    </div>
+                    <div class="statistics-content">
+                        <h5><span data-count="2025" class="statistics-count">2025</span></h5><span>Projects Done</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="statistics bg-color-6">
+                    <div class="statistics-icon"><i class="icon-emotsmile"></i>
+                    </div>
+                    <div class="statistics-content">
+                        <h5> <span data-count="1200" class="statistics-count">1200</span></h5><span>Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="statistics bg-color-4">
+                    <div class="statistics-icon"><i class="icon-hourglass"></i>
+                    </div>
+                    <div class="statistics-content">
+                        <h5><span data-count="8000" class="statistics-count">8000</span></h5><span>Hours of Work</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="statistics bg-color-5">
+                    <div class="statistics-icon"><i class="icon-cup"></i>
+                    </div>
+                    <div class="statistics-content">
+                        <h5><span data-count="4000" class="statistics-count">4000</span></h5><span>Cup of Coffee</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- statistics end -->
+
+
+
+
+<!-- Services Start -->
+<section id="services" class="services-section section-space-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>My Services.</h2>
+                    <div class="divider dark">
+                        <i class="icon-drop"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row margin-top-30">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="services-detail">
+                    <i class="icon-screen-smartphone color-1"></i>
+                    <h3>Mobile Design</h3>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="services-detail">
+                    <i class="icon-screen-tablet color-2"></i>
+                    <h3>Tablet Design</h3>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="services-detail">
+                    <i class="fa fa-code color-3"></i>
+                    <h3>Clean Code</h3>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="services-detail">
+                    <i class="icon-support color-4"></i>
+                    <h3>Full Support</h3>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="services-detail">
+                    <i class="fa fa-html5 color-5"></i>
+                    <h3>HTML5 Design</h3>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="services-detail">
+                    <i class="icon-bulb color-6"></i>
+                    <h3>CSS3 Design</h3>
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Services End -->
+
+
+
+<!-- Call to Action Start -->
+<section class="call-to-action bg-cover section-space-padding text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Do You Want to Know More About Me?</h2>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center">
+                    <a class="button button-style button-style-color-2 smoth-scroll" href="#contact">Contact Me</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Call to Action End -->
+
+
+
+
+<!-- Contact Start -->
+<section id="contact" class="section-space-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h2>Contact Me.</h2>
+                    <div class="divider dark">
+                        <i class="icon-envelope-open"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="margin-top-30 margin-bottom-50">
+            <div class="row">
+
+                <div class="col-md-offset-3 col-sm-offset-2 col-md-6 col-sm-8">
+
+                    <div class="row">
+                        <div class="contact-us-detail"><a href="mailto:name@domain.com">name@domain.com</a></div>
+                        <form class="contact-us pattern-bg">
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" id="name" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" id="website" class="form-control" placeholder="Your Website">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" id="address" class="form-control" placeholder="Where are You From?">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <select id="subject" class="form-group form-control">
+                                    <option value="" selected disabled>Subject</option>
+                                    <option>Website Design & Development</option>
+                                    <option>Wordpress Development</option>
+                                    <option>Search Engine Optimization</option>
+                                    <option>Mobile Website</option>
+                                    <option>I Want to General Talk</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="textarea-message form-group">
+                                    <textarea id="message" class="textarea-message form-control" placeholder="Your Message" rows="5"></textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="text-center">
+                                <button type="submit" class="button button-style button-style-dark button-style-color-2">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- Contact End -->
+
+
+
+
+<!-- Footer Start -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <ul class="social-icon margin-bottom-30">
+                    <li><a href="#" target="_blank" class="facebook"><i class="icon-social-facebook"></i></a></li>
+                    <li><a href="#" target="_blank" class="twitter"><i class="icon-social-twitter"></i></a></li>
+                    <li><a href="#" target="_blank" class="google-plus"><i class="icon-social-google"></i></a></li>
+                    <li><a href="#" target="_blank" class="instagram"><i class="icon-social-instagram"></i></a></li>
+                    <li><a href="#" target="_blank" class="dribbble"><i class="icon-social-dribbble"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-12 uipasta-credit">
+                <p>Design By <a href="http://www.uipasta.com" target="_blank" title="UiPasta">UiPasta</a></p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+<!-- Back to Top Start -->
+<a href="#" class="scroll-to-top"><i class="icon-arrow-up-circle"></i></a>
+<!-- Back to Top End -->
+
+
+<!-- All Javascript Plugins  -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plugin.js"></script>
+
+<!-- Main Javascript File  -->
+<script type="text/javascript" src="js/scripts.js"></script>
+
+
+</body>
+</html>
